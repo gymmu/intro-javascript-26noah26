@@ -4,7 +4,7 @@ function sayHello() {
 
 function changeBackground() {
   const body = document.querySelector("body")
-  body.style.backgroundColor = "darkgrey"
+  body.style.backgroundColor = "magenta"
 }
 
 function deleteText() {
@@ -36,12 +36,21 @@ function resetCounter() {
 function writeText() {
   const inputElem = document.querySelector("#input")
   const outputElem = document.querySelector("#output")
-
+  
   const inputValue = inputElem.value
   const outputValue = outputElem.textContent
-
+  
   const newValue = outputValue + "\n" + inputValue
+  
+  
+  outputElem.textContent = newValue
+}
 
-
-  outputElem.textContext = newValue
+function changeColor(){
+  const inputElem = document.querySelector("#inputcolor")
+  const inputValue = inputElem.value
+ 
+  const body = document.querySelector("body")
+  body.style.color = inputValue
+ 
 }
